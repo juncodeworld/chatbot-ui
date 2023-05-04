@@ -390,7 +390,7 @@ export const ChatInput = ({
         </a>
         .{' '}
         {t(
-          "an advanced kit for OpenAI GPT models 粤ICP备2023042556号 ",
+          "advanced kit for OpenAI GPT Models 粤ICP备2023042556号",
         )}
       </div>
     </div>
