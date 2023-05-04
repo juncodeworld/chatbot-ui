@@ -325,7 +325,7 @@ export const ChatInput = ({
               }`,
             }}
             placeholder={
-              t('chat or "/" a prompt.') || ''
+              t('') || ''
             }
             value={content}
             rows={1}
