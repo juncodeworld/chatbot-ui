@@ -381,7 +381,7 @@ export const ChatInput = ({
       </div>
       <div className="px-3 pt-2 pb-3 text-center text-[12px] text-black/50 dark:text-white/50 md:px-4 md:pt-3 md:pb-6">
         <a
-          href="https://github.com/juncodeworld/chatbot-ui.git"
+          href="http://www.ailogy.cn/"
           target="_blank"
           rel="noreferrer"
           className="underline"
@@ -390,7 +390,7 @@ export const ChatInput = ({
         </a>
         .{' '}
         {t(
-          "Ailogy is an advanced kit for OpenAI GPT models 粤ICP备2023042556号 ",
+          "an advanced kit for OpenAI GPT models 粤ICP备2023042556号 ",
         )}
       </div>
     </div>
