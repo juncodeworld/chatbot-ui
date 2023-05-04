@@ -360,7 +360,7 @@ const Home = ({
       }}
     >
       <Head>
-        <title>Ailogy Chatbot UI</title>
+        <title>Ailogy-GPT</title>
         <meta name="description" content="ChatGPT but better." />
         <meta
           name="viewport"
