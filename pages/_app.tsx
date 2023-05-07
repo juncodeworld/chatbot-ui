@@ -8,7 +8,6 @@ import { Inter } from 'next/font/google';
 import '@/styles/globals.css';
 
 import React, { useEffect, useState } from 'react';
-
 const inter = Inter({ subsets: ['latin'] });
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -17,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 1800000); // 30 minutes in milliseconds
+    }, 60000); // 1 minutes in milliseconds
 
     return () => clearTimeout(timer);
   }, []);
@@ -49,7 +48,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       >
         <h1>欢迎访问 GPT AI </h1>
         <p>请联系站长获得继续访问权限</p>
-        <button style={{display: 'block', margin: '0 auto'}} onClick={handleClosePopup}>Ailogy.cn</button>
+        <button onClick={handleClosePopup}>Ailogy.cn</button>
       </div>
       )}
     </div>
