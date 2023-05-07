@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         style={{
           position: 'fixed',
           bottom: '0',
-          left: '70%',
+          left: '60%',
           transform: 'translate(-50%, -20px)',
           backgroundColor: 'rgba(242, 242, 242, 0.5)',
           padding: '20px',
@@ -47,9 +47,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           zIndex: '9999',
         }}
       >
-        <h1>   www.Ailogy.cn </h1>
+        <h1> Ailogy.cn </h1>
         <p>请联系站长获得继续访问权限</p>
-        <button onClick={handleClosePopup}>.</button>
+        <button onClick={handleClosePopup}> </button>
       </div>
       )}
     </div>
