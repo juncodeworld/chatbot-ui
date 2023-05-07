@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 160000); // 10 minutes in milliseconds
+    }, 300000); // 10 minutes in milliseconds
 
     return () => clearTimeout(timer);
   }, []);
@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         style={{
           position: 'fixed',
           bottom: '0',
-          left: '60%',
+          left: '55%',
           transform: 'translate(-50%, -20px)',
           backgroundColor: 'rgba(242, 242, 242, 0.5)',
           padding: '20px',
@@ -47,8 +47,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           zIndex: '9999',
         }}
       >
-        <h1> Ailogy.cn </h1>
-        <p>请联系站长获得继续访问权限</p>
+        <h1> 联系站长继续 Ailogy.cn </h1>
+        <p> </p>
         <button onClick={handleClosePopup}> </button>
       </div>
       )}
