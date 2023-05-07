@@ -41,7 +41,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           bottom: '0',
           left: '70%',
           transform: 'translate(-50%, -20px)',
-          backgroundColor: rgba(242, 242, 242, 0.5);
+          backgroundColor: 'rgba(242, 242, 242, 0.5)',
           padding: '20px',
           boxShadow: '0 2px 5px rgba(0, 0, 0, 0.3)',
           zIndex: '9999',
@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       >
         <h1>   www.Ailogy.cn </h1>
         <p>请联系站长获得继续访问权限</p>
-        <button onClick={handleClosePopup}> </button>
+        <button onClick={handleClosePopup}>.</button>
       </div>
       )}
     </div>
