@@ -13,11 +13,12 @@ const inter = Inter({ subsets: ['latin'] });
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [showPopup, setShowPopup] = useState(false);
+  const [password, setPassword] = useState('');
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 600000); // 10 minutes in milliseconds
+    }, 180000); // 30 minutes in milliseconds
 
     return () => clearTimeout(timer);
   }, []);
@@ -26,37 +27,54 @@ function MyApp({ Component, pageProps }: AppProps) {
     setShowPopup(false);
   };
 
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // TODO: Check password and close popup if correct
+    if (password === '88888888') {
+      setShowPopup(false);
+    } else {
+      alert('密码不正确，请重试。');
+    }
+  };
+
   const queryClient = new QueryClient();
 
- return (
-  <div className={inter.className}>
-    <Toaster />
-    <QueryClientProvider client={queryClient}>
-      <Component {...pageProps} />
-    </QueryClientProvider>
-    {showPopup && (
-      <div
-        style={{
-          position: 'fixed',
-          bottom: '50px',
-          left: '50%',
-          transform: 'translate(-50%, 0)',
-          backgroundColor: '#eee',
-          padding: '20px',
-          borderRadius: '10px',
-          boxShadow: '0 2px 5px rgba(0, 0, 0, 0.3)',
-          zIndex: '9999',
-        }}
-      >
-        <h1>欢迎体验 GPT AI ！</h1>
-        <p>请加站长微信进群交流</p>
-        <p>体验码：</p>
-        <input type="text" placeholder="请输入体验码" />
-        <button onClick={handleClosePopup}>确定</button>
-      </div>
-    )}
-  </div>
-);
-
+  return (
+    <div className={inter.className}>
+      <Toaster />
+      <QueryClientProvider client={queryClient}>
+        <Component {...pageProps} />
+      </QueryClientProvider>
+      {showPopup && (
+        <div
+          style={{
+            position: 'fixed',
+            bottom: '50px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            padding: '20px',
+            borderRadius: '10px',
+            zIndex: '9999',
+          }}
+        >
+          <h2 style={{ color: '#fff', marginBottom: '20px' }}>欢迎访问 GPT AI </h2>
+          <p style={{ color: '#fff', marginBottom: '20px' }}>请添添加站长微信wenjunart获取验证码</p>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="password" style={{ color: '#fff', marginBottom: '20px' }}>请输入密码：</label>
+            <input type="password" id="password" value={password} onChange={handlePasswordChange} style={{ marginRight: '10px' }} />
+            <button type="submit">提交</button>
+          </form>
+          <button onClick={handleClosePopup} style={{ marginTop: '20px' }}>关闭</button>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default appWithTranslation(MyApp);
