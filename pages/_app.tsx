@@ -13,33 +13,17 @@ const inter = Inter({ subsets: ['latin'] });
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [showPopup, setShowPopup] = useState(false);
-  const [password, setPassword] = useState('');
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 60000); // 30 minutes in milliseconds
+    }, 1800000); // 30 minutes in milliseconds
 
     return () => clearTimeout(timer);
   }, []);
 
   const handleClosePopup = () => {
     setShowPopup(false);
-  };
-
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    // TODO: Check password and close popup if correct
-    if (password === '666') {
-      setShowPopup(false);
-    } else {
-      alert('密码不正确，请重试。');
-    }
   };
 
   const queryClient = new QueryClient();
@@ -52,26 +36,21 @@ function MyApp({ Component, pageProps }: AppProps) {
       </QueryClientProvider>
       {showPopup && (
         <div
-          style={{
-            position: 'fixed',
-            bottom: '50px',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            padding: '20px',
-            borderRadius: '10px',
-            zIndex: '9999',
-          }}
-        >
-          <h2 style={{ color: '#fff', marginBottom: '20px' }}>欢迎访问 Ailogy GPT AI </h2>
-          <p style={{ color: '#fff', marginBottom: '20px' }}>请联系站长获取访问密码</p>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="password" style={{ color: '#fff', marginBottom: '20px' }}>请输入密码：</label>
-            <input type="password" id="password" value={password} onChange={handlePasswordChange} style={{ marginRight: '10px' }} />
-            <button type="submit">提交</button>
-          </form>
-          <button onClick={handleClosePopup} style={{ marginTop: '20px' }}>关闭</button>
-        </div>
+        style={{
+          position: 'fixed',
+          bottom: '0',
+          left: '50%',
+          transform: 'translate(-50%, -20px)',
+          backgroundColor: '#f2f2f2',
+          padding: '20px',
+          boxShadow: '0 2px 5px rgba(0, 0, 0, 0.3)',
+          zIndex: '9999',
+        }}
+      >
+        <h1>欢迎访问 GPT AI </h1>
+        <p>请联系站长获得继续访问权限</p>
+        <button style={{display: 'block', margin: '0 auto'}} onClick={handleClosePopup}>Ailogy.cn</button>
+      </div>
       )}
     </div>
   );
