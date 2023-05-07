@@ -1,7 +1,6 @@
+import React, { useState } from 'react';
 
-import { ChatInput } from './ChatInput';
-
-const ChatInput = () => {
+const ChatInputComponent = () => {
   const [counter, setCounter] = useState(0);
 
   const handleMessageSend = () => {
@@ -23,4 +22,4 @@ const ChatInput = () => {
   );
 };
 
-export default ChatInput;
+export default ChatInputComponent;
