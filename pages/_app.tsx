@@ -7,9 +7,25 @@ import { Inter } from 'next/font/google';
 
 import '@/styles/globals.css';
 
+import React, { useEffect, useState } from 'react';
+
 const inter = Inter({ subsets: ['latin'] });
 
-function App({ Component, pageProps }: AppProps<{}>) {
+function MyApp({ Component, pageProps }: AppProps) {
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+    }, 60000); // 10 minutes in milliseconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+
   const queryClient = new QueryClient();
 
   return (
@@ -18,8 +34,25 @@ function App({ Component, pageProps }: AppProps<{}>) {
       <QueryClientProvider client={queryClient}>
         <Component {...pageProps} />
       </QueryClientProvider>
+      {showPopup && (
+        <div
+          style={{
+            position: 'fixed',
+            bottom: '20px',
+            right: '20px',
+            backgroundColor: '#fff',
+            padding: '20px',
+            boxShadow: '0 2px 5px rgba(0, 0, 0, 0.3)',
+            zIndex: '9999',
+          }}
+        >
+          <h2>欢迎体验 GPT AI ！</h2>
+          <p>请加站长微信进群领取体验码</p>
+          <button onClick={handleClosePopup}>关闭</button>
+        </div>
+      )}
     </div>
   );
 }
 
-export default appWithTranslation(App);
+export default appWithTranslation(MyApp);
