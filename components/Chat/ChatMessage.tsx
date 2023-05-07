@@ -4,7 +4,7 @@ import {
   IconEdit,
   IconCpu,
   IconTrash,
-  IconActivityHeartbeat,
+  IconMessageCircle,
 } from '@tabler/icons-react';
 import { FC, memo, useContext, useEffect, useRef, useState } from 'react';
 
@@ -138,7 +138,7 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex, onEdit }) =
           {message.role === 'assistant' ? (
             <IconCpu size={30} />
           ) : (
-            <IconActivityHeartbeat size={30} />
+            <IconMessageCircle size={30} />
           )}
         </div>
 
