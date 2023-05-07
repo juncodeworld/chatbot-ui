@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 180000); // 30 minutes in milliseconds
+    }, 60000); // 30 minutes in milliseconds
 
     return () => clearTimeout(timer);
   }, []);
@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     event.preventDefault();
 
     // TODO: Check password and close popup if correct
-    if (password === '88888888') {
+    if (password === '666') {
       setShowPopup(false);
     } else {
       alert('密码不正确，请重试。');
@@ -63,8 +63,8 @@ function MyApp({ Component, pageProps }: AppProps) {
             zIndex: '9999',
           }}
         >
-          <h2 style={{ color: '#fff', marginBottom: '20px' }}>欢迎访问 GPT AI </h2>
-          <p style={{ color: '#fff', marginBottom: '20px' }}>请添添加站长微信wenjunart获取验证码</p>
+          <h2 style={{ color: '#fff', marginBottom: '20px' }}>欢迎访问 Ailogy GPT AI </h2>
+          <p style={{ color: '#fff', marginBottom: '20px' }}>请联系站长获取访问密码</p>
           <form onSubmit={handleSubmit}>
             <label htmlFor="password" style={{ color: '#fff', marginBottom: '20px' }}>请输入密码：</label>
             <input type="password" id="password" value={password} onChange={handlePasswordChange} style={{ marginRight: '10px' }} />
