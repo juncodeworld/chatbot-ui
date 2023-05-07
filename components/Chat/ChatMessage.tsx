@@ -2,9 +2,9 @@ import {
   IconCheck,
   IconCopy,
   IconEdit,
-  IconActivityHeartbeat,
+  IconCpu,
   IconTrash,
-  IconUser,
+  IconActivityHeartbeat,
 } from '@tabler/icons-react';
 import { FC, memo, useContext, useEffect, useRef, useState } from 'react';
 
@@ -136,9 +136,9 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex, onEdit }) =
       <div className="relative m-auto flex p-4 text-base md:max-w-2xl md:gap-6 md:py-6 lg:max-w-2xl lg:px-0 xl:max-w-3xl">
         <div className="min-w-[40px] text-right font-bold">
           {message.role === 'assistant' ? (
-            <IconActivityHeartbeat size={30} />
+            <IconCpu size={30} />
           ) : (
-            <IconUser size={30} />
+            <IconActivityHeartbeat size={30} />
           )}
         </div>
 
