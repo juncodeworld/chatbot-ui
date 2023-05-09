@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 60000); // 1 minutes in milliseconds
+    }, 160000); // 1 minutes in milliseconds
 
     return () => clearTimeout(timer);
   }, []);
@@ -46,7 +46,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           boxShadow: '0 2px 5px rgba(0, 0, 0, 0.3)',
           zIndex: '9999',
           width: '1024px',
-          height: '200px',
+          height: '250px',
         }}
       >
         <h1> 联系站长继续 Ailogy.cn </h1>
