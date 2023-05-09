@@ -51,7 +51,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       >
         <h1> 联系站长继续 Ailogy.cn </h1>
         <p> 体验帐号：此GPT帐号仅用于体验有一定的限制</p>
-         <p> 私有帐号：无限制请联系站长部署自己的OpenAI帐号。<p> 
+         <p> 私有帐号：无限制请联系站长部署自己的OpenAI帐号。</p> 
         <button onClick={handleClosePopup}> </button>
       </div>
       )}
