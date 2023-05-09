@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 300000); // 10 minutes in milliseconds
+    }, 60000); // 1 minutes in milliseconds
 
     return () => clearTimeout(timer);
   }, []);
@@ -39,12 +39,14 @@ function MyApp({ Component, pageProps }: AppProps) {
         style={{
           position: 'fixed',
           bottom: '0',
-          left: '55%',
-          transform: 'translate(-50%, -20px)',
-          backgroundColor: 'rgba(242, 242, 242, 0.5)',
+          left: '50%',
+          transform: 'translate(-30%, -20px)',
+          backgroundColor: 'rgba(242, 242, 242, 0.6)',
           padding: '20px',
           boxShadow: '0 2px 5px rgba(0, 0, 0, 0.3)',
           zIndex: '9999',
+          width: '800px',
+          height: '460px',
         }}
       >
         <h1> 联系站长继续 Ailogy.cn </h1>
