@@ -45,12 +45,13 @@ function MyApp({ Component, pageProps }: AppProps) {
           padding: '20px',
           boxShadow: '0 2px 5px rgba(0, 0, 0, 0.3)',
           zIndex: '9999',
-          width: '800px',
-          height: '460px',
+          width: '1024px',
+          height: '200px',
         }}
       >
         <h1> 联系站长继续 Ailogy.cn </h1>
-        <p> </p>
+        <p> 体验帐号：此GPT帐号仅用于体验有一定的限制</p>
+         <p> 私有帐号：无限制请联系站长部署自己的OpenAI帐号。<p> 
         <button onClick={handleClosePopup}> </button>
       </div>
       )}
