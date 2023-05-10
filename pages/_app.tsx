@@ -39,20 +39,20 @@ function MyApp({ Component, pageProps }: AppProps) {
         style={{
           position: 'fixed',
           bottom: '0',
-          left: '0%',
-          transform: 'translate(-30%, -20px)',
+          left: '50%',
+          transform: 'translate(0%, 0px)',
           backgroundColor: 'rgba(242, 242, 242, 0.6)',
-          padding: '20px',
+          padding: '10px',
           boxShadow: '0 2px 5px rgba(0, 0, 0, 0.3)',
           zIndex: '9999',
-          width: '100vw', // 将宽度设置为屏幕宽度
-          height: '250px',
+          width: '800px', // 将宽度设置为屏幕宽度
+          height: '220px',
           textAlign: 'center'
         }}
       >
-        <h1 style={{fontSize: '36px'}}>联系站长部署私有帐号 Ailogy.cn</h1>
-        <p style={{fontSize: '24px', textAlign: 'center'}}>体验帐号：此GPT帐号仅用于体验有一定的限制</p>
-        <p style={{fontSize: '24px', textAlign: 'center'}}>私有帐号：私有OpenAI帐号无限制</p>
+        <h1 style={{fontSize: '26px'}}>联系站长部署私有帐号 Ailogy</h1>
+        <p style={{fontSize: '14px', textAlign: 'center'}}>体验帐号：仅用于体验有限制</p>
+        <p style={{fontSize: '14px', textAlign: 'center'}}>私有帐号：GPT API无限制</p>
         <button onClick={handleClosePopup}></button>
       </div>
       )}
