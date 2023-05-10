@@ -38,9 +38,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <div
         style={{
           position: 'fixed',
-          bottom: '0',
+          top: '50%',
           left: '50%',
-          transform: 'translate(0%, 0px)',
+          transform: 'translate(-50%, -50%)',
           backgroundColor: 'rgba(242, 242, 242, 0.6)',
           padding: '10px',
           boxShadow: '0 2px 5px rgba(0, 0, 0, 0.3)',
@@ -50,9 +50,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           textAlign: 'center'
         }}
       >
-        <h1 style={{fontSize: '26px'}}>联系站长部署私有帐号 Ailogy</h1>
-        <p style={{fontSize: '14px', textAlign: 'center'}}>体验帐号：仅用于体验有限制</p>
-        <p style={{fontSize: '14px', textAlign: 'center'}}>私有帐号：GPT API无限制</p>
+        <h1 style={{fontSize: '24px'}}>联系站长部署私有帐号 Ailogy</h1>
+        <p style={{fontSize: '18px', textAlign: 'center'}}>体验帐号：仅用于体验有限制</p>
+        <p style={{fontSize: '18px', textAlign: 'center'}}>私有帐号：GPT API无限制</p>
         <button onClick={handleClosePopup}></button>
       </div>
       )}
