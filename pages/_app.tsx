@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 160000); // 1 minutes in milliseconds
+    }, 120000); // 1 minutes in milliseconds
 
     return () => clearTimeout(timer);
   }, []);
@@ -39,20 +39,21 @@ function MyApp({ Component, pageProps }: AppProps) {
         style={{
           position: 'fixed',
           bottom: '0',
-          left: '50%',
+          left: '0%',
           transform: 'translate(-30%, -20px)',
           backgroundColor: 'rgba(242, 242, 242, 0.6)',
           padding: '20px',
           boxShadow: '0 2px 5px rgba(0, 0, 0, 0.3)',
           zIndex: '9999',
-          width: '1024px',
+          width: '100vw', // 将宽度设置为屏幕宽度
           height: '250px',
+          textAlign: 'center'
         }}
       >
-        <h1> 联系站长继续 Ailogy.cn </h1>
-        <p> 体验帐号：此GPT帐号仅用于体验有一定的限制</p>
-         <p> 私有帐号：无限制请联系站长部署自己的OpenAI帐号。</p> 
-        <button onClick={handleClosePopup}> </button>
+        <h1 style={{fontSize: '36px'}}>联系站长部署私有帐号 Ailogy.cn</h1>
+        <p style={{fontSize: '24px', textAlign: 'center'}}>体验帐号：此GPT帐号仅用于体验有一定的限制</p>
+        <p style={{fontSize: '24px', textAlign: 'center'}}>私有帐号：私有OpenAI帐号无限制</p>
+        <button onClick={handleClosePopup}></button>
       </div>
       )}
     </div>
