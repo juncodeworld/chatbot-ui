@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 900000); // 10 minutes in milliseconds
+    }, 1800000); // 30 minutes in milliseconds
 
     return () => clearTimeout(timer);
   }, []);
@@ -50,11 +50,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           textAlign: 'center'
         }}
       >
-        <h1 style={{fontSize: '24px'}}> www.Ailogy.cn</h1>
+        <h1 style={{fontSize: '24px'}}> Ailogy.cn</h1>
         <h2 style={{fontSize: '20px'}}>联系站长部署私有帐号</h2>
         <p style={{fontSize: '18px', textAlign: 'center'}}>体验帐号：仅用于体验有限制</p>
-        <p style={{fontSize: '18px', textAlign: 'center'}}>私有帐号：自有GPT－API无限制</p>
-        <p style={{fontSize: '18px', textAlign: 'center'}}>进群AI资源群有福利</p>
+        <p style={{fontSize: '18px', textAlign: 'center'}}>私有帐号：自有GPTAPI无限制</p>
+        <p style={{fontSize: '18px', textAlign: 'center'}}>打赏继续体验，进AI资源群</p>
         <button onClick={handleClosePopup}></button>
       </div>
       )}
