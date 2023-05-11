@@ -54,7 +54,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         <h2 style={{fontSize: '20px'}}>联系站长部署私有帐号</h2>
         <p style={{fontSize: '18px', textAlign: 'center'}}>体验帐号：仅用于体验有限制</p>
         <p style={{fontSize: '18px', textAlign: 'center'}}>私有帐号：自有GPTAPI无限制</p>
-        <p style={{fontSize: '18px', textAlign: 'center'}}>打赏继续体验，进AI资源群</p>
+        <p style={{fontSize: '18px', textAlign: 'center'}}>进AI资源群交流学习</p>
+          <p style={{fontSize: '18px', textAlign: 'center'}}>打赏可继续体验</p>
         <button onClick={handleClosePopup}></button>
       </div>
       )}
