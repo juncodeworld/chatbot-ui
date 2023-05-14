@@ -55,7 +55,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <p style={{fontSize: '18px', textAlign: 'center'}}>体验帐号：仅用于体验有限制</p>
         <p style={{fontSize: '18px', textAlign: 'center'}}>私有帐号：自有官方API无限制</p>
         <p style={{ fontSize: '18px', textAlign: 'center', textDecoration: 'underline', cursor: 'pointer' }} onClick={() => window.location.href='http://ailogy.cn/archives/352'}>进入官网购买体验月卡</p>
-       <button style="text-align: center;" onClick={handleClosePopup}>我已购买</button>
+       <button style={{fontSize: '18px', textAlign: 'center'}} onClick={handleClosePopup}>我已购买</button>
       </div>
       )}
     </div>
