@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 900000); // 10 minutes in milliseconds
+    }, 1800000); // 20 minutes in milliseconds
 
     return () => clearTimeout(timer);
   }, []);
@@ -53,9 +53,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <h1 style={{fontSize: '24px'}}> www.Ailogy.cn</h1>
         <h2 style={{fontSize: '20px'}}>联系站长部署私有帐号</h2>
         <p style={{fontSize: '18px', textAlign: 'center'}}>体验帐号：仅用于体验有限制</p>
-        <p style={{fontSize: '18px', textAlign: 'center'}}>私有帐号：自有GPT－API无限制</p>
-        <p style={{ fontSize: '18px', textAlign: 'center', textDecoration: 'underline', cursor: 'pointer' }} onClick={() => window.location.href='http://ailogy.cn/archives/352'}>进入官网购买GPT月卡</p>
-        <button onClick={handleClosePopup}></button>
+        <p style={{fontSize: '18px', textAlign: 'center'}}>私有帐号：自有官方API无限制</p>
+        <p style={{ fontSize: '18px', textAlign: 'center', textDecoration: 'underline', cursor: 'pointer' }} onClick={() => window.location.href='http://ailogy.cn/archives/352'}>进入官网购买体验月卡</p>
+       <button style="text-align: center;" onClick={handleClosePopup}>我已购买</button>
       </div>
       )}
     </div>
