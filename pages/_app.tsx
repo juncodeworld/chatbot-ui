@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 1200000); // 20 minutes in milliseconds
+    }, 2000000); // 20 minutes in milliseconds
 
     return () => clearTimeout(timer);
   }, []);
@@ -55,12 +55,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         <p style={{fontSize: '18px', textAlign: 'center'}}>私有帐号：自有官方API无限制</p>
         <p style={{ fontSize: '18px', textAlign: 'center', textDecoration: 'underline', cursor: 'pointer' }} onClick={() => window.location.href='http://ailogy.cn/archives/352'}>进入官网购买体验月卡</p>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <input style={{ fontSize: '18px', textAlign: 'center', margin: '10px' }} placeholder="输入体验码" />
-          <button style={{fontSize: '18px', textAlign: 'center'}} onClick={handleClosePopup}>确定</button>
-        </div>
+        <input style={{ fontSize: '18px', textAlign: 'center', margin: '10px' }} placeholder="输入体验码" />
+        <button style={{fontSize: '18px', textAlign: 'center'}} onClick={handleClosePopup}>确定</button>
       </div>
-    )}
-  </div>
-);
+      )}
+    </div>
+  );
+}
 
 export default appWithTranslation(MyApp);
