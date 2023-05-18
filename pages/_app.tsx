@@ -11,11 +11,13 @@ import React, { useEffect, useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const handleClosePopup = (event) => {
+const handleClosePopup = (event: React.ChangeEvent<HTMLInputElement>) => {
   if (event.target.value) {
     setShowPopup(false);
   }
-}
+};
+
+
 
 
 function MyApp({ Component, pageProps }: AppProps) {
