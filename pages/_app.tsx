@@ -4,9 +4,9 @@ import { withTranslation } from 'next-i18next';
 import type { AppProps } from 'next/app';
 import { Inter } from 'next/font/google';
 
-import React, { useEffect, useState, Fragment } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const queryClient = new QueryClient(); // 添加这行
+const queryClient = new QueryClient();
 const inter = Inter({ subsets: ['latin'] });
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 1200000); // 20 minutes in milliseconds
+    }, 1800000); // 30 minutes in milliseconds
 
     return () => clearTimeout(timer);
   }, []);
@@ -44,22 +44,38 @@ function MyApp({ Component, pageProps }: AppProps) {
         padding: '10px',
         boxShadow: '0 2px 5px rgba(0, 0, 0, 0.3)',
         zIndex: '9999',
-        width: '800px', 
+        width: '800px',
         height: '220px',
-        textAlign: 'center'
+        textAlign: 'center',
       }}
     >
-      <h1 style={{fontSize: '24px'}}> Ailogy.cn</h1>
-      <p style={{fontSize: '18px', textAlign: 'center'}}>体验帐号：仅用于体验有限制</p>
-      <p style={{fontSize: '18px', textAlign: 'center'}}>私有帐号：自有GPTAPI无限制</p>
-      <p style={{ fontSize: '18px', textAlign: 'center', textDecoration: 'underline', cursor: 'pointer' }} onClick={() => window.location.href='https://www.aiology.cn/gpt-monthly/'}>进入官网购买GPT月卡</p>
+      <h1 style={{ fontSize: '24px' }}>Ailogy.cn</h1>
+      <p style={{ fontSize: '18px', textAlign: 'center' }}>
+        体验帐号：仅用于体验有限制
+      </p>
+      <p style={{ fontSize: '18px', textAlign: 'center' }}>
+        私有帐号：自有GPTAPI无限制
+      </p>
+      <p
+        style={{
+          fontSize: '18px',
+          textAlign: 'center',
+          textDecoration: 'underline',
+          cursor: 'pointer',
+        }}
+        onClick={() =>
+          (window.location.href = 'https://www.aiology.cn/gpt-monthly/')
+        }
+      >
+        进入官网购买GPT月卡
+      </p>
       <input type="password" value={password} onChange={handlePasswordChange} />
-      <button onClick={handleClosePopup}>关闭</button>
+      <button onClick={handleClosePopup}></button>
     </div>
   );
 
   return (
-    <React.Fragment> {/* 替换 Fragment 为 React.Fragment */}
+    <React.Fragment>
       {showPopup && popupContent}
       <Toaster />
       <QueryClientProvider client={queryClient}>
@@ -69,4 +85,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default withTranslation('common')(MyApp); // 添加 withTranslation
+export default withTranslation('common')(MyApp);
