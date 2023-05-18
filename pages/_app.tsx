@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 1800000); // 30 minutes in milliseconds
+    }, 1200000); // 30 minutes in milliseconds
 
     return () => clearTimeout(timer);
   }, []);
