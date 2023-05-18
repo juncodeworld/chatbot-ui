@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const queryClient = new QueryClient();
 
-  return (
+return (
   <div className={inter.className}>
     <Toaster />
     <QueryClientProvider client={queryClient}>
@@ -55,12 +55,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         <p style={{fontSize: '18px', textAlign: 'center'}}>私有帐号：自有官方API无限制</p>
         <p style={{ fontSize: '18px', textAlign: 'center', textDecoration: 'underline', cursor: 'pointer' }} onClick={() => window.location.href='http://ailogy.cn/archives/352'}>进入官网购买体验月卡</p>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <input style={{ fontSize: '18px', textAlign: 'center', margin: '10px' }} placeholder="输入体验码" />
-        <button style={{fontSize: '18px', textAlign: 'center'}} onClick={handleClosePopup}>确定</button>
+          <input style={{ fontSize: '18px', textAlign: 'center', margin: '10px' }} placeholder="输入体验码" />
+          <button style={{fontSize: '18px', textAlign: 'center'}} onClick={handleClosePopup}>确定</button>
+        </div>
       </div>
-      )}
-    </div>
-  );
-}
+    )}
+  </div>
+);
 
 export default appWithTranslation(MyApp);
