@@ -16,12 +16,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 1200000); // 30 minutes in milliseconds
+    }, 1800000); // 30 minutes in milliseconds
 
     return () => clearTimeout(timer);
   }, []);
 
-  const handlePasswordChange = (event) => {
+  const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
   };
 
@@ -70,7 +70,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         进入官网购买GPT月卡
       </p>
       <input type="password" value={password} onChange={handlePasswordChange} />
-      <button onClick={handleClosePopup}></button>
+      <button onClick={handleClosePopup}>关闭</button>
     </div>
   );
 
