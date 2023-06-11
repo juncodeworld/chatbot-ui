@@ -46,7 +46,7 @@ function MyApp({ Component, pageProps }: AppProps) {
            boxShadow: '0 2px 5px rgba(0, 0, 0, 0.3)',
            zIndex: '9999',
            width: '600px', 
-           height: '220px',
+           height: '170px',
            textAlign: 'center'
          }}
        >
@@ -54,7 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <h2 style={{fontSize: '20px'}}>通知：AI助理即将更新！</h2>
         <p style={{fontSize: '18px', textAlign: 'center'}}>请尽快保存对话相关资料</p>
         <p style={{ fontSize: '18px', textAlign: 'center', textDecoration: 'underline', cursor: 'pointer' }} onClick={() => window.location.href='http://ailogy.cn/'}>进入官网</p>
-       <button style={{fontSize: '18px', textAlign: 'center'}} onClick={handleClosePopup}>确定</button>
+       <button style={{fontSize: '18px', textAlign: 'center'}} onClick={handleClosePopup}>好的</button>
       </div>
       )}
     </div>
