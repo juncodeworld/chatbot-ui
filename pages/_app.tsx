@@ -41,11 +41,11 @@ function MyApp({ Component, pageProps }: AppProps) {
            top: '50%',
            left: '50%',
            transform: 'translate(-50%, -50%)',
-           backgroundColor: 'black', // 将此处的值改为 black
+           backgroundColor: 'gray', // 将此处的值改为 gray
            padding: '10px',
            boxShadow: '0 2px 5px rgba(0, 0, 0, 0.3)',
            zIndex: '9999',
-           width: '800px', 
+           width: '600px', 
            height: '220px',
            textAlign: 'center'
          }}
