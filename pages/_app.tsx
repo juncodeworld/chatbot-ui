@@ -50,9 +50,9 @@ function MyApp({ Component, pageProps }: AppProps) {
            textAlign: 'center'
          }}
        >
-        <h1 style={{fontSize: '24px'}}> www.Ailogy.cn</h1>
-        <h2 style={{fontSize: '20px'}}>通知：AI助理即将更新！</h2>
-        <p style={{fontSize: '18px', textAlign: 'center'}}>请尽快保存对话相关资料</p>
+        <h1 style={{fontSize: '24px'}}> 通知：AI助理已更新！</h1>
+        <h2 style={{fontSize: '20px'}}>请前往Ailogy官网注册体验</h2>
+        <p style={{fontSize: '18px', textAlign: 'center'}}>2023-05－15</p>
         <p style={{ fontSize: '18px', textAlign: 'center', textDecoration: 'underline', cursor: 'pointer' }} onClick={() => window.location.href='http://ailogy.cn/'}>进入官网</p>
        <button style={{fontSize: '18px', textAlign: 'center'}} onClick={handleClosePopup}>好的</button>
       </div>
