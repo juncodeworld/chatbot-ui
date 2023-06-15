@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 100000); // 20 minutes in milliseconds
+    }, 1000); // 20 minutes in milliseconds
 
     return () => clearTimeout(timer);
   }, []);
@@ -54,7 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <h2 style={{fontSize: '20px'}}>请前往Ailogy官网注册体验</h2>
         <p style={{fontSize: '18px', textAlign: 'center'}}>2023-05－15</p>
         <p style={{ fontSize: '18px', textAlign: 'center', textDecoration: 'underline', cursor: 'pointer' }} onClick={() => window.location.href='http://ailogy.cn/'}>进入官网</p>
-       <button style={{fontSize: '18px', textAlign: 'center'}} onClick={handleClosePopup}>好的</button>
+       <button style={{fontSize: '18px', textAlign: 'center'}} onClick={handleClosePopup}></button>
       </div>
       )}
     </div>
