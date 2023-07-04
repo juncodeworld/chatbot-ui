@@ -54,11 +54,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <h2 style={{fontSize: '20px'}}>请前往Ailogy官网注册体验</h2>
         <p style={{fontSize: '18px', textAlign: 'center'}}>2023-05－15</p>
         <p style={{ fontSize: '18px', textAlign: 'center', textDecoration: 'underline', cursor: 'pointer' }} onClick={() => window.location.href='http://ailogy.cn/'}>进入官网</p>
-       <button style={{fontSize: '18px', textAlign: 'center'}} onClick={handleClosePopup}></button>
+       <button style={{fontSize: '18px', textAlign: 'center'}} onClick={handleClosePopup}>我有AIPkey</button>
       </div>
       )}
     </div>
   );
 }
-
 export default appWithTranslation(MyApp);
