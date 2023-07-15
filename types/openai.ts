@@ -18,8 +18,8 @@ export enum OpenAIModelID {
 export const fallbackModelID = OpenAIModelID.GPT_3_5;
 
 export const OpenAIModels: Record<OpenAIModelID, OpenAIModel> = {
-  [OpenAIModelID.GPT_3_5]: {
-    id: OpenAIModelID.GPT_3_5,
+  [OpenAIModelID.GPT_3_5_16k]: {
+    id: OpenAIModelID.GPT_3_5_16k,
     name: 'GPT-3.5-TURBO-16k',
     maxLength: 48000,
     tokenLimit: 16000,
